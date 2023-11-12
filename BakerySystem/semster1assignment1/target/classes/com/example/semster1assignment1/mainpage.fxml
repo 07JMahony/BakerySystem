@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.semster1assignment1.mainController">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="608.0">
+            <top>
+                <HBox prefHeight="50.0" prefWidth="608.0" style="-fx-background-color: #1ecbe1;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="myLabel" alignment="CENTER" prefHeight="20.0" prefWidth="126.0" text="Baked Good Name" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                  <TextField fx:id="mainTextFieldName" prefHeight="26.0" prefWidth="59.0" />
+                  <Label fx:id="myLabel11" alignment="CENTER" prefHeight="20.0" prefWidth="116.0" text="Country of Origin" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mainTextFieldOrigin" prefHeight="26.0" prefWidth="52.0" />
+                        <Label fx:id="myLabel1" alignment="CENTER" prefHeight="20.0" prefWidth="72.0" text="Description" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                  <TextField fx:id="mainTextFieldDescription" prefHeight="26.0" prefWidth="58.0" />
+                        <Label fx:id="myLabel2" alignment="CENTER" prefHeight="20.0" prefWidth="45.0" text="Image" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="mainTextFieldImage" prefHeight="26.0" prefWidth="67.0" />
+                    </children>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                    <padding>
+                        <Insets top="10.0" />
+                    </padding>
+                </HBox>
+            </top>
+            <center>
+                <ListView fx:id="mainListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            </center>
+            <bottom>
+                <HBox prefHeight="50.0" prefWidth="608.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label prefHeight="50.0" prefWidth="167.0" />
+                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="314.0" text="Baked Goods">
+                            <font>
+                                <Font name="System Bold Italic" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#switchToRecipes" prefHeight="26.0" prefWidth="126.0" text="Next to Recipes" />
+                    </children>
+                </HBox>
+            </bottom>
+            <left>
+                <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="addGoodButton" mnemonicParsing="false" onMouseClicked="#addGood" prefHeight="26.0" prefWidth="71.0" text="Add Good" />
+                        <Button fx:id="removeGoodButton" mnemonicParsing="false" onMouseClicked="#deleteGood" text="Delete Good" />
+                        <Button fx:id="resetGoodButton" mnemonicParsing="false" onAction="#resetGood" text="Reset Goods" />
+                        <Button mnemonicParsing="false" onAction="#switchToViewing" text="View All Goods" />
+                    </children>
+                </VBox>
+            </left>
+        </BorderPane>
+    </children>
+</AnchorPane>
